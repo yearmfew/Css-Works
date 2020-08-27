@@ -1,0 +1,268 @@
+*{box-sizing:border-box;}
+
+
+body{
+	margin:0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+/*Menu*/
+.menuBar{
+	height:80px;
+	width:100%;
+	
+	background-color:#073f68;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+	justify-content:space-around;
+	align-content: center;
+}
+
+.logo{
+	width:30%;
+}
+
+.logo img{
+	height:80px;
+	width:20%;	
+	filter:brightness(10000%);
+}
+
+
+
+
+.menu ul li{
+	display:inline-block;
+	list-style-type: none;
+	padding:10px;
+	margin:5px;
+}
+
+.menu li a{
+	text-decoration:none;
+	color:white;
+	border:1px solid white;
+	font-size:20px;
+	padding:10px;
+	transition:0.5s;
+}
+
+.menu li:hover a{
+	color:#073f68;
+	background-color:white;
+
+}
+
+.menuBar .nav{
+	display:none;
+}
+
+/* Gallery*/
+.gallery{
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url("indir.jpeg");
+	background-position: center;
+	background-size: cover;
+	height:50vh;
+	width:100%;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	margin-top:20px;
+}
+
+.gallery .heading{
+
+	font-family: calibri;
+	font-size:30px;
+	color:white;
+}
+.heading h4{
+	border-bottom: 1px solid white;
+	padding:20px;
+
+}
+
+
+.gallery a{
+	font-family:calibri;
+	text-decoration:none;
+	font-size:20px;
+	padding:10px 10px;
+	border:1px solid white;
+	color:white;
+	background-color:rgba(255, 255, 255, 0.4);
+	transition:0.5s;
+
+}
+
+.gallery a:hover{
+	background-color:white;
+	color:#073f68;
+	padding:10px 30px;
+}
+
+
+/*Lessons*/
+
+.lessons{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width:100%;
+	margin:1% 0;
+
+
+}
+
+.course{
+	width:23%;
+	
+	background:linear-gradient(rgba(52, 64, 98,1), rgba(52,64,98,0.4));
+	color:white;
+	border-radius:2%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding:20px;
+	text-align: justify;
+	font-family:verdana;
+}
+
+.course p{
+	text-indent:15px;
+}
+.course img{
+	width:50%;
+}
+
+/*Contact*/
+
+.content{
+	display: flex;
+	flex-flow:row;
+	justify-content: space-around;
+	background-color:#171717;
+	color:white;
+	height:40vh;
+	width:100%;
+	padding:10px 0;
+	text-align: justify;
+}
+
+.content div{
+	border:1px solid purple;
+	border-radius:3%;
+	width:30%;
+	padding:10px;
+	font-size:18px;
+	font-family:courier;
+
+}
+
+.footer{
+	font-size:30px;
+	background-color:#171717;
+	width:100%;
+	text-align:center;
+	border-top:1px solid purple;
+	padding:10px;
+	;
+
+}
+
+.footer i{
+	margin:20px;
+}
+
+.footer a{
+	transition:0.5s;
+}
+.footer a:hover{
+	color:white;
+	font-size:40px;
+}
+
+
+
+/*Tablet design*/
+
+@media only screen and (max-width:992px){
+	.menuBar{
+		justify-content: space-between;
+	}
+
+	.logo img{
+		width:30%;
+	}
+
+	.lessons{
+		flex-wrap:wrap;
+	}
+	.course{
+		width:48%;
+		margin-bottom:10px 0;
+	}
+	.course img{
+		width:30%;
+	}
+}
+
+/*Smart phone design*/
+
+@media only screen and (max-width:830px){
+	.menuBar{
+		justify-content:space-between;
+		align-items:center;
+	}
+
+	.menuBar .menu{
+		display:none;
+	}
+
+	.menuBar .nav{
+		display:block;
+		color:white;
+		border:1px solid white;
+		height:50%;
+		padding:4%;
+		text-align:center;
+		margin-right:5%;
+
+	}
+	.menuBar .logo{
+		margin-left:8%;
+	}
+
+	/*lessons*/
+	.lessons{
+		flex-flow:column;
+		justify-content: center;
+	}
+
+
+	.course{
+		width:100%;
+		margin:10px 0;
+	}
+
+	/*content*/
+
+	.content{
+		flex-flow:column;
+		
+		height:70vh;
+
+
+	}
+	.content div{
+		width:100%;
+		padding:1.5%;
+
+	}
+}
